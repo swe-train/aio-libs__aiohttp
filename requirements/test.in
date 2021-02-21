@@ -8,7 +8,7 @@ proxy.py >= 2.4.4rc5
 pytest
 pytest-cov
 pytest-mock
-pytest-xdist; python_version >= "3.8" or sys_platform == "win32"
+pytest-xdist
 python-on-whales
 re-assert
 setuptools-git
