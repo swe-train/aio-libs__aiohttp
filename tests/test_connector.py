@@ -2003,7 +2003,7 @@ async def test_connect_with_capacity_release_waiters(loop: Any) -> None:
 
         assert not conn._waiters
 
-        await conn.close()
+        yield from conn.close()
 
     check_with_exc(OSError(1, "permission error"))
     check_with_exc(RuntimeError())
