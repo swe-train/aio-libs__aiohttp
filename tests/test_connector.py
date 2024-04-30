@@ -2003,9 +2003,9 @@ async def test_connect_with_capacity_release_waiters(loop: Any) -> None:
 
         assert not conn._waiters
 
-        return conn
+        await conn.close()
 
-    await check_with_exc(OSError(1, "permission error")).close()
+    check_with_exc(OSError(1, "permission error"))
     check_with_exc(RuntimeError())
     check_with_exc(asyncio.TimeoutError())
 
