@@ -118,6 +118,7 @@ async def test_secure_https_proxy_absolute_path(
 
     await sess.close()
     await conn.close()
+    await asyncio.sleep(0.1)
 
 
 @pytest.mark.parametrize("web_server_endpoint_type", ("https",))
